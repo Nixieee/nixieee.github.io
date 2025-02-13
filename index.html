@@ -48,39 +48,94 @@
     <section id="projects">
         <div class="container">
             <div class="project-wrapper">
-                <h2 class="section-title" data-sr-id="2"
-                    style="visibility: visible; opacity: 1; transition: all, opacity 0.5s cubic-bezier(1, 0, 0, 0.5);">
-                    Projects</h2>
-                <div class="row">
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="project-wrapper__text" data-sr-id="8"
-                            style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0.1s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0.1s;">
-                            <h3 class="project-wrapper__text-title">DiceyRoll</h3>
-                            <div>
-                                <p class="mb-4"><b>DiceyRoll</b> is the ultimate app for on-the-go decision-making, games, and fun—right from your wrist! Whether you're rolling a single die or testing your luck with up to six, 
-                                    this app brings the thrill of the roll to your Apple Watch.
-                                    You can even flip a coin with ease, making decisions quicker than ever!</p>
-                            </div>
-                            <a target="_blank" class="cta-btn cta-btn--hero"
-                                href="https://apps.apple.com/us/app/diceyroll/id6740410432"> App Store </a>
-                            </div>
-                    </div>
-                    <div class="col-lg-8 col-sm-12">
-                        <div class="project-wrapper__image" data-sr-id="9"
-                            style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0.3s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0.3s;">
-                                <div data-tilt="" class="thumbnail rounded">
-                                    <picture>
-                                        <source srcset="./sources/DiceyRollSite.png"
-                                            media="(prefers-color-scheme: dark)"><img class="img-fluid"
-                                            src="./sources/DiceyRollSite.png">
-                                    </picture>
+                <h2 class="section-title" data-sr-id="2">Projects</h2>
+                
+                <div class="project-slider">
+                    <button class="nav-arrow left-arrow" style="display: none;">&#9665;</button>
+                    
+                    <!-- DiceyRoll Project -->
+                    <div class="project-slide">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-12">
+                                <div class="project-wrapper__text">
+                                    <h3 class="project-wrapper__text-title">DiceyRoll</h3>
+                                    <p class="mb-4"><b>DiceyRoll</b> is the ultimate app for on-the-go decision-making, games, and fun—right from your wrist! Whether you're rolling a single die or testing your luck with up to six, this app brings the thrill of the roll to your Apple Watch. You can even flip a coin with ease, making decisions quicker than ever!</p>
+                                    <a target="_blank" class="cta-btn cta-btn--hero" href="https://apps.apple.com/us/app/diceyroll/id6740410432"> App Store</a>
                                 </div>
-                            </a></div>
+                            </div>
+                            <div class="col-lg-8 col-sm-12">
+                                <div class="project-wrapper__image">
+                                    <div data-tilt="" class="thumbnail rounded">
+                                        <picture>
+                                            <source srcset="./sources/DiceyRollSite.png" media="(prefers-color-scheme: dark)">
+                                            <img class="img-fluid" src="./sources/DiceyRollSite.png">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Listen Together Project -->
+                    <div class="project-slide">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-12">
+                                <div class="project-wrapper__text">
+                                    <h3 class="project-wrapper__text-title">Listen Together</h3>
+                                    <p class="mb-4"><b>Listen Together</b> brings seamless audio sharing to macOS, allowing you to connect multiple Bluetooth audio devices and share music, podcasts, or videos with friends—just like iOS Audio Share! Whether you're watching a movie together or vibing to the same playlist, enjoy perfectly synchronized audio with ease.</p>
+                                    <a target="_blank" class="cta-btn cta-btn--hero">Coming Soon</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-sm-12">
+                                <div class="project-wrapper__image">
+                                    <div data-tilt="" class="thumbnail rounded">
+                                        <picture>
+                                            <source srcset="./sources/ListenTogetherSite.png" media="(prefers-color-scheme: dark)">
+                                            <img class="img-fluid" src="./sources/ListenTogetherSite.png">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="nav-arrow right-arrow">&#9655;</button>
                 </div>
             </div>
         </div>
-    </section>
+    </section>    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".project-slide");
+        const prevBtn = document.querySelector(".left-arrow");
+        const nextBtn = document.querySelector(".right-arrow");
+        let currentIndex = 0;
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("active", i === index);
+            });
+            prevBtn.style.display = index === 0 ? "none" : "block";
+            nextBtn.style.display = index === slides.length - 1 ? "none" : "block";
+        }
+    
+        prevBtn.addEventListener("click", () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showSlide(currentIndex);
+            }
+        });
+    
+        nextBtn.addEventListener("click", () => {
+            if (currentIndex < slides.length - 1) {
+                currentIndex++;
+                showSlide(currentIndex);
+            }
+        });
+    
+        showSlide(currentIndex);
+    });
+    </script>
+    
     <section id="contact">
         <div class="container">
             <h2 class="section-title" data-sr-id="3"
