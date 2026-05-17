@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoTV Control Privacy Policy</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --background: #f8f8fa;
+            --surface: #ffffff;
+            --text: #1d1d1f;
+            --muted: #5f6368;
+            --border: #e4e4e7;
+            --accent: #007aff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #111113;
+                --surface: #1c1c1e;
+                --text: #f5f5f7;
+                --muted: #b8b8bd;
+                --border: #333338;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--background);
+        }
+
+        main {
+            width: min(760px, calc(100% - 32px));
+            margin: 48px auto;
+            padding: 40px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: clamp(2rem, 6vw, 3rem);
+            line-height: 1.1;
+        }
+
+        h2 {
+            margin: 32px 0 8px;
+            font-size: 1.3rem;
+        }
+
+        p {
+            margin: 0 0 16px;
+        }
+
+        ul {
+            margin: 0 0 16px 20px;
+            padding: 0;
+        }
+
+        .effective-date {
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+
+        a {
+            color: var(--accent);
+        }
+
+        @media (max-width: 600px) {
+            main {
+                width: 100%;
+                min-height: 100vh;
+                margin: 0;
+                padding: 28px 20px;
+                border: 0;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>RemoTV Control Privacy Policy</h1>
+        <p class="effective-date">Effective date: May 17, 2026</p>
+
+        <p>RemoTV Control is a local-network TV remote for iPhone and Apple Watch. The app is designed to control supported smart TVs on the same Wi-Fi network without accounts, advertising, or server-side tracking.</p>
+
+        <h2>Data We Do Not Collect</h2>
+        <p>RemoTV Control does not collect, sell, rent, or share personal data. The app does not include third-party advertising, third-party analytics, account creation, or a cloud service operated by the developer.</p>
+
+        <h2>Local Data Stored On Your Device</h2>
+        <p>The app may store TV connection details on your iPhone so you can reconnect quickly. This can include:</p>
+        <ul>
+            <li>TV name</li>
+            <li>TV brand</li>
+            <li>local IP address and port</li>
+            <li>optional MAC address for Wake-on-LAN</li>
+            <li>pairing or authorization token when required by a supported TV platform</li>
+            <li>favorite and connection status preferences</li>
+        </ul>
+        <p>This information is stored locally on your device. It is used only to discover, reconnect to, and control TVs on your local network.</p>
+
+        <h2>Apple Watch Sync</h2>
+        <p>If you use the Apple Watch app, RemoTV Control may sync saved TV details from the iPhone app to the Apple Watch app through Apple's WatchConnectivity framework. This sync is used to show your saved TVs and send remote commands from your watch.</p>
+
+        <h2>Local Network Access</h2>
+        <p>RemoTV Control asks for local network access so it can find and control TVs on your Wi-Fi network. Commands are sent directly between your Apple device and the selected TV over the local network where the TV platform supports it.</p>
+
+        <h2>Diagnostics</h2>
+        <p>The app does not send diagnostic data to the developer. Apple may provide crash logs or diagnostics if you choose to share analytics with app developers through Apple system settings.</p>
+
+        <h2>Children</h2>
+        <p>RemoTV Control is not directed to children and does not knowingly collect data from children.</p>
+
+        <h2>Changes</h2>
+        <p>This policy may be updated when the app's features or data practices change. Any material change should be reflected before the updated app version is submitted for review.</p>
+
+        <h2>Contact</h2>
+        <p>For privacy questions, contact the developer through the support URL listed on the App Store product page.</p>
+    </main>
+</body>
+</html>
